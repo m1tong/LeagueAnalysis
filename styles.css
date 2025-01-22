@@ -1,0 +1,200 @@
+/*DO NOT ADD ANY CODE HERE*/
+/* .center_plot {
+    margin: auto;
+    text-align: center;
+} */
+/* 
+.parent-container {
+    overflow: hidden;
+  }
+*/
+.axis {
+    color: white;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+div {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    box-sizing: border-box;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+.wstitle {
+    /* margin: -10px; */
+    padding-bottom: 0px;
+    background-image: url("./trophy.png");
+    background-position: center;
+    background-size: cover;
+    width: 100% auto;
+    height: 105%;
+}
+.wstitle h1{
+    /* background-color: #0041B0; */
+    position: absolute;
+    bottom: 350px;
+    left: 100px;
+    background-image: linear-gradient(to right, #ECD67C, #A07B2F);
+    text-align: center;
+    font-size: 55px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 20px;
+    color: #ECD67C;
+    font-style: oblique;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.wstitle p {
+    position: absolute;
+    /* text-align: center; */
+    bottom: 200;
+    left: 110;
+    color: rgb(239, 236, 236);
+    width: 48%;
+}
+
+
+div.tooltip{
+    position: absolute;
+    text-align: center;
+    width: "fit-content";
+    height: "fit-content";
+    padding: 5px;
+    background: white;
+    pointer-events: none;
+    }
+
+.intro {
+    background-color: rgb(235, 235, 235);
+    /* overflow: auto; */
+    display: flex; /* add display:flex */
+    align-items: center; /* add align-items:center */
+}
+
+.left_plot{
+    float: right;
+    display: block;
+    margin-right: -5px;
+}
+
+.left_content {
+    margin-left: 30px;
+    margin-right: 0px;
+    /* text-align: center;  */
+}
+.info {
+    font-size: 15px;
+    color: black;
+    font-weight: normal;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(31, 31, 212);
+}
+
+.plot_description {
+    color: rgb(31, 31, 212);
+}
+.d_title{
+    font-size: 100%;
+}
+
+/* css for game play plot */
+.gameplay {
+    background-color: rgb(1, 45, 92);
+    /* overflow: auto; */
+    display: flex; /* add display:flex */
+    align-items: center; /* add align-items:center */
+    justify-content: space-between; /* add justify-content property */
+
+}
+.right_content {
+    margin-left: 0px;
+    margin-right: 30px;
+    /* text-align: center;  */
+}
+.right_plot{
+    float: left;
+    display: block;
+}
+
+.dark_title {
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(232, 202, 38);
+}
+
+.darkd_title{
+    font-size: 100%;
+    color: rgb(232, 202, 38);
+}
+
+.darkplot_description {
+    color: white;
+}
+
+.dark_info {
+    font-size: 15px;
+    color: white;
+    font-weight: normal;
+}
+
+.buttons {
+    margin-bottom: 0;
+    margin-top: 20px;
+    margin-left: 20px; /* add margin-left to push the buttons to the left */
+}
+
+/* css for DPM */
+.KDA {
+    background-color: rgba(211, 242, 243, 0.842);
+    /* overflow: auto; */
+    display: flex; /* add display:flex */
+    align-items: center; /* add align-items:center */
+}
+
+.KDA h3{
+    color: rgb(1, 70, 144);
+}
+
+.KDAplot_description{
+    color: rgb(1, 70, 144);
+
+}
+
+.summary{
+    /* overflow: auto; */
+    display: flex; /* add display:flex */
+    align-items: center; /* add align-items:center */
+}
+
+.img {
+    float: right;
+    display: block;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.img_title{
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(31, 31, 212);
+}
+
+.img_content {
+    margin-left: 50px;
+    margin-right: 25px;
+    text-align: center; 
+}
+

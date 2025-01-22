@@ -1,0 +1,220 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="app.js">
+    </script>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+
+</head>
+<body onload=finalproject()> 
+
+<div>
+<div class="wstitle">
+    <h1>League of Legends <br>
+        World Championship 2022</h1>
+        <p>
+            Riot Games, the developer and publisher of League of Legends (LoL), created this popular multiplayer online battle arena (MOBA) game in 2009. Since its launch, LOL has become one of the most popular and influential esports titles of the twenty-first century, continuing to shape the industry to this day.
+            <!-- <br> -->
+            The pinnacle of competitive LOL is the annual League of Legends World Championship, also known as Worlds. This esports tournament brings together the best teams from around the globe to compete for the coveted title of world champion, as well as a multi-million dollar prize pool and a unique in-game skin.
+            </p>
+</div>
+</div>
+
+<div>
+<div class ="intro">
+
+
+    <div class ='left_content'>
+        <h3 class ='title'>Numbers of Player In Each Region</h3>
+        <p class ='info'>
+        While there are over 100 professional esports teams across more than ten regions, only a select few are chosen to participate in Worlds. The five main regions that dominate the competitive scene are LPL (China), LCK (Korea), LEC (Europe), LCS (North America), and LMS (Taiwan and Vietnam). The tournament typically lasts for several weeks and showcases intense matches, high-level gameplay, and a passionate fanbase supporting their favorite teams.
+        <br> <br>
+        Each region is rewarded a different number of slots to participate in the League of Legends World Championship, based on their previous performance and the results of the Mid-Season Invitational (MSI), an annual international competition held midway through the year. The MSI serves as a key indicator of each region's performance and helps allocate slots to each region for Worlds.
+        <br> <br>
+        In 2022, RNG, a team from the LPL (China), won the MSI championship, with LCK (Korea) coming in second place. As a result, both LPL and LCK were rewarded with four slots each to participate in Worlds. LEC (Europe) and LCS (North America) made it to the semifinals, earning them three slots each. LMS (Taiwan and Vietnam), on the other hand, did not make it past the group stage and were rewarded with two slots.
+        <br> <br>
+        Each team in Worlds is composed of five players who compete in the tournament, with some teams also bringing substitute players to change up their chemistry as needed. So some teams have additional player stats compared to the rest. `
+
+        </p>
+        <div class ='plot_description'>
+            <h3 class ='d_title'>Plot Description</h3>
+            <p>
+                <b>Color Scheme:</b> I used different colors indicating different region. <br>
+                <b>Marks:</b> Points, Lines, Areas<br>
+                <b>Channel:</b>Horizontal Position, Vertical Position, Shape, Color, Size <br>
+            </p>
+        </div>
+    </div>
+  
+    <div id="world_plot" class="left_plot">
+    
+
+</div>
+</div>
+
+<div>
+    <div class ="gameplay">
+ 
+        <div class = "right_plot">
+        <div class= "buttons">
+            <button type="button", id="sort_button_Rank">Sort by Rank</button> <br>
+            <button type="button", id="sort_button_GP">Sort by Game Play</button>
+            </div>
+        <div id="gp_plot" class="right_plot">
+        </div>
+        </div>
+
+        <div class ='right_content'>
+            <h3 class ='dark_title'>What does Game Play Implies?</h3>
+            <p class ='dark_info'>
+            Let's take a closer look at the number of games played by each team in the Worlds tournament. During the group stage, all teams ranked 8-16 played only 6 games, which is the standard. Typically, playing more games would result in a higher rank, but there are also exceptions to this rule. In the tournament, teams played in a best-of-5 format, which meant that once one team won three games, they claimed the victory. Sometimes, a team playing fewer games could indicate a stronger team since they likely won their matches more decisively.
+            <br> <br>
+            Upon analyzing the chart, it is clear that DRX and T1, both teams in the final stage, should have had similar numbers of games played. However, DRX played three more games than T1 because they played five games in both the quarter and semi-finals. Despite playing the most games, DRX ended up winning the championship, which could be attributed to their experience in best-of-5 series and practicing team compositions. It is evident that playing more games tends to lead to a better ranking in the tournament when comparing teams in different stages.
+                            </p>
+            <div class ='darkplot_description'>
+                <h3 class ='darkd_title'>Plot Description</h3>
+                <p>
+                    <b>Color Scheme:</b> I used a base color of white for the bar graph, and when we hover on top, the color will change to yellow. I used a color scheme of blue, white, and yellow in this section. <br>
+                    <b>Marks:</b> Lines<br>
+                    <b>Channel:</b> Horizontal Position, Vertical Position, Color <br>
+                </p>
+            </div>
+        </div>
+
+    
+
+    </div>
+</div>
+
+<div>
+    <div class ="KDA">
+    
+    
+        <div class ='left_content'>
+            <h3 class ='title'>Higher DPM = Higher KDA?</h3>
+            <p class ='info'>
+            On the graph, the x-axis shows the KDA (kill and assist per death), while the y-axis shows the DPM (damage per minute). A higher KDA suggests that a player participated in team fights and did not die as often, which is important when examining their DPM. DPM measures the amount of damage a player deals per minute, providing insight into how much they contribute to the team. 
+            <br><br>
+            Support players typically have a DPM of around 150 since their primary role is to support their teammates. The key difference between support players lies in their KDA, which tests their ability to initiate team fights while remaining alive. Therefore, KDA is the primary indicator of a support player's performance.
+            <br><br>
+            Jungle players have a DPM ranging from 430 to 150 and a KDA of 1 to 5, indicating that they played a diverse range of champions in 2022. Some focused on initiating team fights as a tank, while others focused on dealing damage as a hyper carry.
+            <br><br>
+            Mid lane and ADC players are the primary sources of ability damage and tend to attract enemy attention, with a DPM range of 400 to 700. This range is the highest compared to other roles, and both roles display similar trends in DPM and KDA, with ADCs having slightly higher KDAs and mid laners having slightly higher DPMs. Due to their ability to deal significant damage before dying, mid laners tend to have a higher DPM and a lower KDA.
+            <br><br>
+            Top lane players have the lowest KDA since they are often caught in isolation away from the rest of the team. Therefore, DPM is a crucial factor in evaluating a top lane player's performance.
+                
+            </p>
+            <div class ='KDAplot_description'>
+                <h3 class ='d_title'>Plot Description</h3>
+                <p>
+                    <b>Color Scheme:</b> I used different colors indicating different position. <br>
+                    <b>Marks:</b> Points<br>
+                    <b>Channel:</b> Horizontal Position, Vertical Position, Color, Size <br>
+                    <b>Design:</b>When hover over each dot, it will display the player's name, thier KDA, and their DPM.
+                </p>
+            </div>
+        </div>
+      
+        <div id="scatter_plot" class="left_plot">
+        
+    
+    </div>
+</div>
+
+<div>
+    <div class ="KDA">
+    
+    
+        <div class ='left_content'>
+            <h3 class ='title'>DPM Indepth</h3>
+            <p class ='info'>
+            Let's examine the DPM chart, which indicates damage per minute. We can observe that LPL and LCK are similar, while LCS, LEC, and LMS are in a different category. LPL has three slots in the top 8, while LCK has four, and LEC has one. LPL and LCK have a range of DPM around 300 to 600, while LCS ranges from 200 to 480, LEC from 280 to 520, and LMS from 200 to 450. DPM is a key factor in separating regions into different tiers.
+            <br><br>
+            LPL has the highest DPM, which is due to their team fighting ability, and the teams in LPL enjoy team fighting to determine winners. In contrast, LCK focuses more on fighting only around objectives. Despite this, LCK still has a high DPM due to their players' strong ability to deal damage, and they have to fight when encountering teams from other regions. LEC, on average, has a slight advantage over the rest, which is reasonable considering that LEC is probably the third region after LPL and LCK. Although LMS, LEC, and LCS enjoy teamfighting and always fighting, their ability to deal damage is much lower, causing them to have a lower win rate compared to LPL and LCK.
+            <br><br>
+            LMS and LCS have a really different Q3 to Q2 value compared to Q2 and Q1, showcasing a large difference between each player's skill level. Some players excel, while some lack DPS, which is also the reason why only one or two teams can perform well, causing the entire region to experience lower performance due to the catfish effect.
+                
+            </p>
+            <div class ='KDAplot_description'>
+                <h3 class ='d_title'>Plot Description</h3>
+                <p>
+                    <b>Color Scheme:</b> I used different colors indicating different region. <br>
+                    <b>Marks:</b>Lines<br>
+                    <b>Channel:</b> Position, Color, Shape, Area, Length <br>
+                    <b>Design:</b>When hover over each dot, it will display the player's name, thier KDA, and their DPM.
+                </p>
+            </div>
+        </div>
+      
+        <div id="box_plot" class="left_plot">
+        
+    
+    </div>
+</div>
+
+
+<div>
+    <div class ="gameplay">
+ 
+        <div class = "right_plot">
+        <div class= "buttons">
+            <!-- <button type="button", id="sort_button_Rank">Sort by Rank</button> <br>
+            <button type="button", id="sort_button_GP">Sort by Game Play</button> -->
+            </div>
+        <div id="wpm_plot" class="right_plot">
+        </div>
+        </div>
+
+        <div class ='right_content'>
+            <h3 class ='dark_title'>Importance of Ward</h3>
+            <p class ='dark_info'>
+            The y-axis on the chart represents Ward Per Minute, which is the amount of ward placed by each team allocated to each member per minute. In League of Legends, wards are critical for map control and vision score, especially when the team is going after objectives. Support players have a significantly higher WPM score compared to other roles, as their goal is to support the team and spend their gold on wards. When looking at the chart, it is evident that the LEC and LCS have relatively low scores compared to the LPL and LCK, as the former focuses more on team fighting than playing around objectives.
+            <br><br>
+            Comparing different teams between the LPL and LCK, we can see that the support has a similar vision score, while LPL jungle has a slightly higher vision score but is pretty similar. However, the top, mid, and ADC from LCK teams have a much higher WPM, which could be the reason why LCK tends to have a higher KDA. A higher WPM helps LCK focus on objective control and playing around that, which could be why they tend to be the winners of the competition, with the first and second place teams coming from LCK.
+            <br><br>
+            Pyosik, the jungle player from DRX, has a unique playstyle. He likes to play hyper-carry junglers and buy vision to invade, which is reflected in his WPM of about 1.5, similar to support players. This is in contrast to other junglers, who have an average WPM of only 0.6. Therefore, understanding the importance of warding and playing around objectives can be a crucial factor in a team's success in League of Legends.
+
+            </p>
+            <div class ='darkplot_description'>
+                <h3 class ='darkd_title'>Plot Description</h3>
+                <p>
+                    <b>Color Scheme:</b> I indicate each position by different colors, matching the position color in the scatter plot above.
+                    As the mouse hover on the bar, it will display the Player's informations. <br>
+                    <b>Marks:</b> Lines<br>
+                    <b>Channel:</b> Horizontal Position, Vertical Position, Color <br>
+                </p>
+            </div>
+        </div>
+
+    
+
+    </div>
+</div>
+
+
+<div>
+    <div class ="Summary">
+ 
+
+        <div class ='img_content'>
+            <h3 class ='img_title'>Summary</h3>
+            <p class ='img_info'>
+                These charts are highly beneficial for analyzing team performance, providing both professional guidance on how to improve as a team and individual players, as well as aiding in predictions for betting purposes. They enable fans to understand which team or region has a higher chance of winning a championship by examining key statistics from their previous games. The two key indicators, DPM and WPM, take into consideration damage-dealing potential and objective strategy respectively. DPM reflects gaming ability and physical reflex skills, while WPM reflects cognitive analyzing skills. Previous number of games played and KDA can also be used as supporting elements to further validate predictions.
+            <br><br>
+            Furthermore, the individual on the right-hand side of the picture is none other than Deft, a player who played for the team DRX in 2022. Having been a professional player for a decade, Deft finally achieved his first world championship victory in the same year, solidifying his status as one of the top players in the league.
+            </p>
+        </div>
+
+    
+        <div class = "img">
+            <img src="./deft.jpeg">
+        </div>
+    </div>
+</div>
+
+    
+   
+</body>  
+</html>  
